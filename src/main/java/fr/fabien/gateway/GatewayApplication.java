@@ -14,7 +14,7 @@ public class GatewayApplication {
 	@Bean
 	public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
 
-		return builder.routes().route(r -> r.path("/getOffers/apec/**").uri("lb://apec-microservice"))
+		return builder.routes().route(r -> r.path("/getOffers/apec/**").uri("lb://web-crawler-connector-apec"))
 				.route(r -> r.path("/getOffers/adsearch/**").uri("lb://adsearch-microservice"))
 				.route(r -> r.path("/getOffers/silkhom/**").uri("lb://silkhom-microservice")).build();
 	}
