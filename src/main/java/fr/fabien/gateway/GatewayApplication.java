@@ -16,7 +16,7 @@ public class GatewayApplication {
 
 		return builder.routes().route(r -> r.path("/getOffers/apec/**").uri("lb://web-crawler-connector-apec"))
 				.route(r -> r.path("/getOffers/adsearch/**").uri("lb://adsearch-microservice"))
-				.route(r -> r.path("/getOffers/silkhom/**").uri("lb://silkhom-microservice")).build();
+				.route(r -> r.path("/getOffers/silkhom/**").uri("lb://web-crawler-connector-silkhom")).build();
 	}
 
 	public static void main(String[] args) {
