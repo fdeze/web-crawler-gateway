@@ -15,7 +15,7 @@ public class GatewayApplication {
 	public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
 
 		return builder.routes().route(r -> r.path("/getOffers/apec/**").uri("lb://web-crawler-connector-apec"))
-				.route(r -> r.path("/getOffers/adsearch/**").uri("lb://adsearch-microservice"))
+				.route(r -> r.path("/getOffers/ffg/**").uri("lb://ffg-microservice"))
 				.route(r -> r.path("/getOffers/silkhom/**").uri("lb://web-crawler-connector-silkhom")).build();
 	}
 
